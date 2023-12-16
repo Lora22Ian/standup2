@@ -1,6 +1,6 @@
 <!-- Fișier: resources/views/pagina.blade.php -->
 
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
     <div class="container">

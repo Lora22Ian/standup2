@@ -1,37 +1,26 @@
-@extends('layouts.master') 
+@extends('layouts.app')
 
-@section('content') 
+@section('content')
 
- <div class="panel panel-default"> 
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            View comedian
+        </div>
+        <div class="panel-body">
 
- <div class="panel-heading"> 
+            <div class="pull-right">
+                <a class="btn btn-primary" href="{{ route('comedians.index')}}">Inapoi la Comedianti</a>
+            </div>
 
- View comediant 
+            <div class="form-group">
+                <strong>Nume: </strong> {{ $comediant->name }}
+            </div>
 
- </div> 
+            <div class="form-group">
+                <strong>Descriere: </strong> {{ $comediant->description }}
+            </div>
 
- <div class="panel-body"> 
+        </div>
+    </div>
 
- <div class="pull-right"> 
-
- <a class="btn btn-default" href="{{ route('comedians.index')}}">Inapoi</a> 
-
- </div> 
-
- <div class="form-group"> 
-
- <strong>Nume: </strong> {{ $comediant->name }} 
-
- </div> 
-
- <div class="form-group"> 
-
- <strong>Descriere: </strong> {{ $comediant->description }} 
-
- </div> 
-
- </div> 
-
- </div> 
-
-@endsection 
+@endsection

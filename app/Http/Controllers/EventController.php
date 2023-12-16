@@ -77,4 +77,9 @@ class EventController extends Controller
         Event::find($id)->delete();
         return redirect()->route('events.index')->with('success','Event removed successfully');
     }
+    public function showAll()
+    {
+        $event = Event::all();
+        return view('events.index', compact('event'));
+    }
 }

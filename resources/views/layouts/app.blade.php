@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'STAND UP') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -20,8 +20,11 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'STAND UP') }}
+                <a class="navbar-brand" href="{{ url('/home') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+                <a class="navbar-brand" href="{{ url('/home') }}">
+                    Home
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -32,7 +35,9 @@
                     <ul class="navbar-nav me-auto">
 
                     </ul>
-
+                    <ul class="navbar-nav mx-auto">
+                    <b>STAND-UP</b>
+                    </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
@@ -71,10 +76,15 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
-            @yield('content')
+         <main class="py-4">
+            <div class="container">
+                <div class="head">
+                    <h1></h1>
+                </div>
+                @yield('content')
+            </div>
         </main>
+        
     </div>
 </body>
 </html>
